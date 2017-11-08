@@ -8,16 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [
-        {
-          name: "apple",
-          price: "5"
-        },
-        {
-          name: "iPod",
-          price: "200"
-        }
-      ]
+      items: []
     };
   }
 
@@ -25,14 +16,20 @@ class App extends Component {
 
     const shopItems = this.state.items.map((item, index) => (
       <ShopItem key={item.name} item={item} onDelete={() => this.removeItem(index)} />
-    )
-    )
+    ));
+
+    var total= 0;
+
+    this.state.items.map((item) =>
+    total+=item.price
+  );
 
     return (
       <div className="App">
         <h1>Shopping List</h1>
         <div className="App_items">
           {shopItems}
+          <p className="total">{"Total: " + total }</p>
           <ShopForm onSubmit={this.addItem.bind(this)} />
         </div>
       </div>

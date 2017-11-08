@@ -12,18 +12,17 @@ class ShopForm extends Component {
 
     render() {
         return (
-            <form className="ContactForm" onSubmit={this.handleSubmit.bind(this)}>
-                <h2>Add a Contact</h2>
+            <form className="ShopForm" onSubmit={this.handleSubmit.bind(this)}>
                 <p>
-                    <label>Name</label>
+                    <label>Item: </label>
                     <input value={this.state.name} onChange={this.handleNameChange.bind(this)} />
                 </p>
-                <p>
-                    <label>Price</label>
+                <p >
+                    <label>Price: </label>
                     <input value={this.state.price} onChange={this.handlePriceChange.bind(this)} />
                 </p>
                 <p className="ShopForm__button-bar">
-                    <button type="submit">Add</button>
+                    <button className="addBtn" type="submit">Add</button>
                 </p>
             </form>
         );
@@ -37,7 +36,7 @@ class ShopForm extends Component {
 
     handlePriceChange(event) {
         this.setState({
-            price: event.target.value
+            price: Number(event.target.value)
         });
     }
 

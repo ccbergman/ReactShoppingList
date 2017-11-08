@@ -4,3 +4,53 @@ body {
   font-family: sans-serif;
 }
 
+.App {
+  margin: 10px;
+  text-align: center;
+}
+
+.addBtn {
+  width: 70%;
+  border: none;
+  padding: 4px;
+  background-color: rgb(144, 255, 144);
+}
+
+.addBtn:hover {
+  background-color: rgb(148, 148, 255);
+}
+
+.ShopForm {
+  margin: auto 30%;
+  border: solid black 1px;
+}
+
+.ShopItem__delete-button {
+  /* display: block; */
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid tomato;
+  border: none;
+  color: red;
+  background-color: white;
+  margin-right: 12px;
+  margin-bottom: 4%;
+}
+
+.ShopItem {
+  display: flex;
+  justify-content: center;
+}
+
+.ShopItem__name {
+  margin-right: 35px;
+}
+
+.ShopItem__price {
+}
+
+input {
+  width: 70%;
+}
