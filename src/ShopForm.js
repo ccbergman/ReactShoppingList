@@ -19,7 +19,7 @@ class ShopForm extends Component {
                 </p>
                 <p >
                     <label>Price: </label>
-                    <input value={this.state.price} onChange={this.handlePriceChange.bind(this)} />
+                    <input type="number" value={this.state.price} onChange={this.handlePriceChange.bind(this)} />
                 </p>
                 <p className="ShopForm__button-bar">
                     <button className="addBtn" type="submit">Add</button>
