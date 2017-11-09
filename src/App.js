@@ -29,7 +29,7 @@ class App extends Component {
         <h1>Shopping List</h1>
         <div className="App_items">
           {shopItems}
-          <p className="total">{"Total: " + total }</p>
+          <p className="total">{"Total: $" + total + ".00" }</p>
           <ShopForm onSubmit={this.addItem.bind(this)} />
         </div>
       </div>

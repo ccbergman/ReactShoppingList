@@ -12,7 +12,7 @@ class ShopItem extends Component {
                         <i className="fa fa-minus-circle"></i>
                     </button>
                     <div className="ShopItem__name">{this.props.item.name}</div>
-                    <div className="ShopItem__price">{this.props.item.price || "No Price"}</div>
+                    <div className="ShopItem__price">{"$" + this.props.item.price + ".00" || "No Price"}</div>
                 </div>
             );
         }
